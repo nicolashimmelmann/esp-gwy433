@@ -1,0 +1,9 @@
+.pio
+.pioenvs
+.piolibdeps
+.clang_complete
+.gcc-flags.json
+
+.DS_Store
+
+include/WiFiCredentials.h
