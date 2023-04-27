@@ -3,11 +3,11 @@
 
 #include <WiFiUdp.h>
 
-class ESP_RX433 {
+class ESP_RX433
+{
 public:
     ESP_RX433();
     ~ESP_RX433();
-
 };
 
 #endif

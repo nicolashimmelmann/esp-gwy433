@@ -6,9 +6,11 @@
 #include <vector>
 #include <WiFiUdp.h>
 
-class GWY433 {
+class GWY433
+{
 public:
-    struct Signal {
+    struct Signal
+    {
         uint8_t repeatCount;
         uint16_t pauseLength;
         uint16_t pulseLength;
@@ -30,17 +32,15 @@ public:
      * TXP:0,0,<repeat count>,<pause length>,<pulse length>,
      * <number of signal changes>,<pulse length multipliers (actual signal)...>;
      */
-    void parseAndSend(const char * data, size_t lenBytes);
+    void parseAndSend(const char *data, size_t lenBytes);
 
-    void send(Signal const& signal);
+    void send(Signal const &signal);
 
 private:
     uint8_t pin_tx;
     WiFiUDP mUdp;
 
     IPAddress ip;
-
 };
-
 
 #endif
