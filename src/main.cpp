@@ -12,13 +12,6 @@
 #include "ESP_RX433.h"
 #include "WiFiCredentials.h"
 
-namespace std
-{
-    void __throw_bad_cast(void) {}
-    void __throw_ios_failure(char const *) {}
-    void __throw_runtime_error(char const *) {}
-}
-
 #define DEBUG
 
 const char *_hostname = "HomeGateway";
@@ -51,6 +44,7 @@ void wifi_connect(void)
     // Start timer to retry if nothing happens in the configured time
     wifiReconnectTimer.once(_reconnect_time, wifi_connect);
 }
+
 void onWifiConnected(const WiFiEventStationModeGotIP &event)
 {
 #ifdef DEBUG
@@ -65,6 +59,7 @@ void onWifiConnected(const WiFiEventStationModeGotIP &event)
 
     initOnConnect();
 }
+
 void onWifiDisconnected(const WiFiEventStationModeDisconnected &event)
 {
 #ifdef DEBUG
