@@ -36,7 +36,7 @@ void GWY433::listen()
             // Reply with identification packet
             std::stringstream replyStr;
             replyStr << "HCGW:VC:Brennenstuhl;MC:0290217;FW:V016;IP:"
-                     << (this->ip).toString()
+                     << (this->ip).toString().c_str()
                      << ";;";
             std::string strData = replyStr.str();
             mUdp.beginPacket(mUdp.remoteIP(), mUdp.remotePort());
