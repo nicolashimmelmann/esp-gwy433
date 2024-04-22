@@ -18,7 +18,7 @@ Brennenstuhl sells a gateway operating at 433MHz, which is used to switch on and
 ## Basic operation
 
 - The Gateway listens on UDP port 49880 for incoming messages.
-- If a message is received which contains the payload `SEARCH HCGW`, the gateway answers with the following information: ``` HCGW:VC:Brennenstuhl;MC:0290217;FW:V016;IP:192.168.xxx.yyy;;````
+- If a message is received which contains the payload `SEARCH HCGW`, the gateway answers with the following information: `HCGW:VC:Brennenstuhl;MC:0290217;FW:V016;IP:192.168.xxx.yyy;;`
 - If a message is received which contains a protocol sequence, such as `TXP:0,0,6,10000,314,66,18,18,2,2,1,1,2,2,1,1,2,1,2,1,2,2,1,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,2,1,1,2,1,2,1,2,2,1,1,2,2,1,2,1,2,1,1,2,2,1,2,1,1,2,2,1,2,1,1,2,2,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,2,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,1,2,2,1,1,2,2,1,2,1,2,1,2,1,2,1,1,2,1,2,2,1,1,2,2,1,2;`, it simply sends out the signal on 433MHz.
 
 ## The protocol
